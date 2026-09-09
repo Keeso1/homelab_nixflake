@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./modules/neovim-tools.nix
       ./modules/zshrc.nix
+      ./modules/tmux.nix
     ];
 
   # Automatic cleanup
@@ -90,7 +91,6 @@
      starship
      zoxide
      fzf
-     tmux
      ghostty
      claude-code
    ];
