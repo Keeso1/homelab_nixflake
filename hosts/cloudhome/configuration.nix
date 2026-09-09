@@ -54,6 +54,17 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+
+  # Greeter
+  services.greetd = {
+        enable = true;
+        settings = {
+                default_session = {
+                        user = "isac";
+                        command = "${lib.getExe' pkgs.tuigreet "tuigreet"} --time --cmd start-hyprland";
+                    };
+            };
+    };
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "se";
