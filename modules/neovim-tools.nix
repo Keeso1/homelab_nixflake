@@ -5,6 +5,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    neovim
     tree-sitter
     lua-language-server           # lua_ls (LazyVim core default)
     stylua                        # lua formatter
