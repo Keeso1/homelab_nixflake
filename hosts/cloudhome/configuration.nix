@@ -76,6 +76,10 @@
   };
 
   programs.hyprland.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
   programs.firefox.enable = true;
   programs.zsh.enable = true;
   # Allow unfree packages
