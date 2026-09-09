@@ -34,7 +34,7 @@
 
   programs.zoxide = {
     enable = true;
-    options = [ "--cmd" "cd" ];
+    flags = [ "--cmd" "cd" ];
   };
 
   programs.fzf = {
