@@ -23,8 +23,13 @@
 
 
   # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.enable = false;
+  boot.loader.efi.canTouchEfiVariables = false;
+
+  boot.loader.grub = {
+  	enable = true;
+	device = "/dev/nvme0n1";
+  };
 
   networking.hostName = "cloudhome"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -114,6 +119,8 @@
      fzf
      ghostty
      claude-code
+     lazygit
+     lazydocker
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -127,7 +134,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
