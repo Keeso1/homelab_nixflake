@@ -24,6 +24,9 @@
     interactiveShellInit = ''
       bindkey -v
 
+      # Case-insensitive completion (doc matches Doc, DOC, etc.)
+      zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
       nixcommit() {
         cd /etc/nixos && sudo git commit -m "$1" && git status
       }
