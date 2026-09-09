@@ -10,12 +10,21 @@
   };
 
   outputs = { self, nixpkgs, noctalia, ... }: {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = { inherit noctalia; };
-      modules = [
-        ./configuration.nix
-      ];
+    nixosConfigurations = {
+      cyberhome = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/cyberhome/configuration.nix
+        ];
+      };
+
+      cloudhome = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit noctalia; };
+        modules = [
+          ./hosts/cloudhome/configuration.nix
+        ];
+      };
     };
   };
 }

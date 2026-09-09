@@ -13,9 +13,9 @@
     shellAliases = {
       dotfiles = "/run/current-system/sw/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
       spf = "superfile";
-      nixbuildswitch = "sudo nixos-rebuild switch --flake /etc/nixos#nixos";
-      nixbuildtest = "sudo nixos-rebuild test --flake /etc/nixos#nixos";
-      nixbuild = "sudo nixos-rebuild build --flake /etc/nixos#nixos";
+      nixbuildswitch = "sudo nixos-rebuild switch --flake /etc/nixos#${config.networking.hostName}";
+      nixbuildtest = "sudo nixos-rebuild test --flake /etc/nixos#${config.networking.hostName}";
+      nixbuild = "sudo nixos-rebuild build --flake /etc/nixos#${config.networking.hostName}";
       nixupdate = "cd /etc/nixos && nix flake update && cd -";
       nixstage = "cd /etc/nixos && sudo git add -A && git status";
     };

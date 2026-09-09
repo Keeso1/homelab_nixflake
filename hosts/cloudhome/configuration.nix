@@ -8,9 +8,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./modules/neovim-tools.nix
-      ./modules/zshrc.nix
-      ./modules/tmux.nix
+      ../../modules/neovim-tools.nix
+      ../../modules/zshrc.nix
+      ../../modules/tmux.nix
+      ../../modules/tailscale.nix
+      ../../modules/docker.nix
+      ../../modules/syncthing.nix
     ];
 
   # Automatic cleanup
@@ -23,7 +26,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "cyberhome"; # Define your hostname.
+  networking.hostName = "cloudhome"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
