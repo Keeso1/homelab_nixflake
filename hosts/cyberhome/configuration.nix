@@ -14,6 +14,7 @@
       ../../modules/tailscale.nix
       ../../modules/docker.nix
       ../../modules/syncthing.nix
+      ../../modules/vaultwarden-backup.nix
     ];
 
   # Automatic cleanup
