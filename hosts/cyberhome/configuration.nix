@@ -57,18 +57,9 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
-  # Greeter
-  # NOTE: DE/greeter/display stack mirrors cloudhome for now; the plan is to
-  # strip cyberhome down to a pure TTY setup later.
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        user = "isac";
-        command = "${lib.getExe' pkgs.tuigreet "tuigreet"} --time";
-      };
-    };
-  };
+  # No greeter: plain TTY login. Hyprland is still available to launch
+  # manually from a TTY if needed, but nothing starts it automatically.
+  services.greetd.enable = false;
 
   # Configure keymap in X11
   services.xserver.xkb = {
