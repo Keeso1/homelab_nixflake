@@ -31,6 +31,13 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Runs closed-lid as a headless server; don't suspend/hibernate on lid close.
+  services.logind.settings.Login = {
+    HandleLidSwitch = "ignore";
+    HandleLidSwitchExternalPower = "ignore";
+    HandleLidSwitchDocked = "ignore";
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
 
