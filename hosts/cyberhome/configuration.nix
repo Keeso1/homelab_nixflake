@@ -71,6 +71,9 @@
   # Configure console keymap
   console.keyMap = "sv-latin1";
 
+  # Battery
+  services.upower.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."isac" = {
     isNormalUser = true;
