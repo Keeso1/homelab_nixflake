@@ -65,7 +65,7 @@
     settings = {
       default_session = {
         user = "isac";
-        command = "${lib.getExe' pkgs.tuigreet "tuigreet"} --time --cmd start-hyprland";
+        command = "${lib.getExe' pkgs.tuigreet "tuigreet"} --time";
       };
     };
   };
