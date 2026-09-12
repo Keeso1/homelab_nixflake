@@ -132,7 +132,7 @@
      lazygit
      lazydocker
      bibata-cursors
-     rg
+     ripgrep
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
