@@ -13,7 +13,6 @@
       ../../modules/tmux.nix
       ../../modules/tailscale.nix
       ../../modules/docker.nix
-      ../../modules/syncthing.nix
     ];
 
   # Automatic cleanup
