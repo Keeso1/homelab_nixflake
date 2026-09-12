@@ -30,6 +30,24 @@
 	device = "/dev/nvme0n1";
   };
 
+  # NVIDIA GPU (RTX 2070 / TU106)
+  hardware.graphics.enable = true;
+
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    # Required for Wayland compositors (Hyprland).
+    modesetting.enable = true;
+    # Desktop GPU, not a laptop, so no suspend/resume power quirks to work around.
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    # Proprietary driver: more mature than the open kernel module for Turing-era
+    # GeForce cards, especially for CUDA/NVENC workloads.
+    open = false;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
   networking.hostName = "cloudhome"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
