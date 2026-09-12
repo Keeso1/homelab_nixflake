@@ -30,6 +30,8 @@
       nixcommit() {
         cd /etc/nixos && sudo git commit -m "$1" && git status
       }
+
+      fastfetch
     '';
   };
 
