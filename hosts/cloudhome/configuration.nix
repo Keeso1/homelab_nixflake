@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, pkgs, lib, noctalia, ... }:
+{ config, pkgs, lib, noctalia, zen-browser, ... }:
 
 {
   imports =
@@ -133,6 +133,9 @@
      lazydocker
      bibata-cursors
      ripgrep
+     jq
+     gimp
+     zen-browser.packages."${pkgs.system}".default
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
