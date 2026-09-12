@@ -113,7 +113,7 @@
      claude-code
      lazygit
      lazydocker
-     bibatat-cursors
+     bibata-cursors
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
