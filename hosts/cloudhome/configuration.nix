@@ -95,7 +95,7 @@
 
   # Configure console keymap
   console.keyMap = "sv-latin1";
-
+  fonts.packages = with pkgs; [ nerd-fonts.departure-mono ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."isac" = {
     isNormalUser = true;
@@ -132,6 +132,7 @@
      lazygit
      lazydocker
      bibata-cursors
+     rg
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
