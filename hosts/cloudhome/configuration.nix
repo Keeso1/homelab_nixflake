@@ -14,6 +14,7 @@
       ../../modules/tailscale.nix
       ../../modules/docker.nix
       ../../modules/steam.nix
+      ../../modules/minecraft.nix
     ];
 
   # Automatic cleanup
