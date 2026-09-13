@@ -13,6 +13,7 @@
       ../../modules/tmux.nix
       ../../modules/tailscale.nix
       ../../modules/docker.nix
+      ../../modules/steam.nix
     ];
 
   # Automatic cleanup
