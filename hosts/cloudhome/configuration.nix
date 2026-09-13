@@ -142,6 +142,7 @@
      grim
      slurp
      wl-clipboard
+     btop
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
