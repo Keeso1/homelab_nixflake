@@ -138,6 +138,9 @@
      jq
      gimp
      zen-browser.packages."${pkgs.system}".default
+     grim
+     slurp
+     wl-clipboard
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
