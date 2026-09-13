@@ -138,6 +138,7 @@
      jq
      gimp
      zen-browser.packages."${pkgs.system}".default
+     vesktop
      grim
      slurp
      wl-clipboard
