@@ -16,8 +16,9 @@
       nixbuildswitch = "sudo nixos-rebuild switch --flake /etc/nixos#${config.networking.hostName}";
       nixbuildtest = "sudo nixos-rebuild test --flake /etc/nixos#${config.networking.hostName}";
       nixbuild = "sudo nixos-rebuild build --flake /etc/nixos#${config.networking.hostName}";
-      nixupdate = "cd /etc/nixos && nix flake update && cd -";
+      nixupdate = "cd /etc/nixos && sudo nix flake update && cd -";
       nixstage = "cd /etc/nixos && sudo git add -A && git status";
+      nixgarbagecollect = "sudo nix-collect-garbage --delete-older-than 5d";
     };
 
     # Anything that isn't a plain alias — vi mode, functions, etc.
