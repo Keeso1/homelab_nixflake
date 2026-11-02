@@ -15,6 +15,7 @@
       ../../modules/docker.nix
       ../../modules/steam.nix
       ../../modules/minecraft.nix
+      ../../modules/r2modman.nix
     ];
 
   # Automatic cleanup
@@ -32,8 +33,17 @@
 	device = "/dev/nvme0n1";
   };
 
+    fileSystems."/mnt/hdd" = {
+    device = "/dev/disk/by-uuid/806ee76a-e79e-4348-9920-6f533150b114";
+    fsType = "ext4";
+    options = [ "nofail" ];
+    };
+
   # NVIDIA GPU (RTX 2070 / TU106)
-  hardware.graphics.enable = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    };
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -51,6 +61,7 @@
   };
 
   networking.hostName = "cloudhome"; # Define your hostname.
+  networking.firewall.trustedInterfaces = [ "tailscale0" ];
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -143,6 +154,11 @@
      slurp
      wl-clipboard
      btop
+     lutris
+     winetricks
+     wget
+     thunar
+     spotify
    ];
 
   # Some programs need SUID wrappers, can be configured further or are
