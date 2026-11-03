@@ -107,6 +107,7 @@
      ghostty
      claude-code
      lazygit
+     vesktop
      lazydocker
    ];
 
